@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "844068901417",
+    "project_id": "flankarastoktakip",
+    "storage_bucket": "flankarastoktakip.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844068901417:android:9dac0124bf1c0d5d7fc238",
+        "android_client_info": {
+          "package_name": "flutterturkey.stoktakip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844068901417-bg8536pmejdlau821oaijvilshn41a94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdQ_2jMn7_1afNsucWJYNzG0Uqss2ykL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844068901417-bg8536pmejdlau821oaijvilshn41a94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
