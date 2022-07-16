@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:stoktakip/data/models/stock_model.dart';
+import 'package:stoktakip/home/home_screen.dart';
 
 class SummaryController extends GetxController {
   RxBool editMode = false.obs;
@@ -38,15 +39,19 @@ class SummaryController extends GetxController {
     editMode.value = !editMode.value;
   }
 
-  void sendToConfirmation() {
+  Future<void> sendToConfirmation() async {
     isLoading.value = true;
     try {
+      List<String> tempList = [];
       if (stockData.productImageList != null) {
         for (var element in stockData.productImageList!) {
-          uploadMedia(File(element));
+          tempList.add(await uploadMedia(File(element)));
         }
       }
+      stockData.productImageList = tempList;
       submit();
+      isLoading.value = false;
+      Get.offAllNamed(HomeScreen.routeName);
     } catch (e) {
       print(e);
     }
