@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get/get.dart';
+import 'package:stoktakip/addstock/view/addstock_vieww.dart';
 import 'package:stoktakip/home/home_controller.dart';
 
 import '../core/animation/stack_path_transition.dart';
@@ -34,7 +35,9 @@ class HomeScreen extends GetWidget<HomeController> {
                 child: SizedBox(
                     height: 40,
                     child: OutlinedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.toNamed(AddStockView.routeName);
+                        },
                         child: const Text("Stoktan alma isteği"))),
               ),
             ),
